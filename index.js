@@ -53,7 +53,7 @@ inquirer.prompt([
     {
         name: "username",
         type: "input",
-        message: "Github Username",
+        message: "Github & Username",
     },
     {
         name: "email",
@@ -79,23 +79,23 @@ inquirer.prompt([
 
     let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
 
-    let linkTitle = "[Go to ReadMe Generator section]{#readme-generator}";
-    let linkDesc = "[Go to Desctiption section]{#description}";
-    let linkInstall = "[Go to Install section]{#install}";
-    let linkUsage = "[Go to Usage section]{#usage}";
-    let linkLicense = "[Go to License section]{#license}";
-    let linkContribute = "[Go to Contributers Section]{#contributers}";
-    let linkQuestion = "[Go to Question Section]{#question}";
+    let linkTitle = "[Go to ReadMe Generator section](#readme-generator)";
+    let linkDesc = "[Go to Desctiption section](#description)";
+    let linkInstall = "[Go to Install section](#install)";
+    let linkUsage = "[Go to Usage section](#usage)";
+    let linkLicense = "[Go to License section](#license)";
+    let linkContribute = "[Go to Contributers Section](#contributers)";
+    let linkQuestion = "[Go to Question Section](#question)";
 
     let build = "";
-    build += `#${title}\n`;
-    build += `#Description:\n${description}\n\n`;
+    build += `#${title}\n\n`;
+    build += `#Description\n\n${description}\n\n`;
     build += `#Table of Contents\n\n`;
     build += `${linkTitle} ${linkDesc} ${linkInstall} ${linkUsage} ${linkLicense} ${linkContribute} ${linkQuestion}\n\n`;
-    build += `#Install:\n${mInstall}\n\n`;
-    build += `#Usage:\n${mUsage}\n\n`;
-    build += `#Contributers:\n${mContribute}\n\n`;
-    build += `#Test:\n${mTest}\n\n`;
+    build += `\n#Install\n${mInstall}\n\n`;
+    build += `#Usage\n${mUsage}\n\n`;
+    build += `#Contributers\n${mContribute}\n\n`;
+    build += `#Test\n${mTest}\n\n`;
     build += `#License:\n${mLicense}\n\n`;
     build += `#Questions - Contact Me\n`;
     build += `Github: ${username}\n`
