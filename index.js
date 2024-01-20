@@ -136,29 +136,29 @@ inquirer.prompt([
     
     let build = "";
     build += `# ${title}\n`;
-    build += `# Description\n${description}\n`;
-    build += `# Table of Contents`;
-    build += `| ${linkTitle} | | ${linkDesc} |
-              | ${linkInstall} | | ${linkUsage} |
-              | ${linkContribute} | | ${linkLicense} |
-              | ${linkQuestion} |\n`
+    build += `# Description\n${description}\n\n`;
+    build += `# Table of Contents\n`;
+    build += 
+`| ${linkTitle} | | ${linkDesc} |
+| ${linkInstall} | | ${linkUsage} |
+| ${linkContribute} | | ${linkLicense} |
+| ${linkQuestion} |\n\n`
 
-    build += `# Installation\n${installation}\n`;
-    build += `# Usage\n${usage}\n`;
-    build += `# Contributors\n${contributions}\n`;
-    build += `# Tests\n${test}\n`;
+    build += `# Installation\n${installation}\n\n`;
+    build += `# Usage\n${usage}\n\n`;
+    build += `# Contributors\n${contributions}\n\n`;
+    build += `# Tests\n${test}\n\n`;
 
     if(license === "MIT") {
-        console.log("MIT License");
-        build += `# License \n${MITLicenseBadge}\n\n${MITdescription}\n`;
+        build += `# License \n${MITLicenseBadge}\n\n${MITdescription}\n\n`;
     } else if(license === "GNU GPL 3.0") {
-        build += `# License \n${GNULicenseBadge}\n\n${GNUdescription}\n`;
+        build += `# License \n${GNULicenseBadge}\n\n${GNUdescription}\n\n`;
     } else if(license === "Apache 2.0") {
-        build += `# License \n${apacheLicenseBadge}\n\n${Apachedescription}\n`;
+        build += `# License \n${apacheLicenseBadge}\n\n${Apachedescription}\n\n`;
     } else if(license === "BSD-2") {
-        build += `# License \n${BSDLicenseBadge}\n\n${BSDdescription}\n`;
+        build += `# License \n${BSDLicenseBadge}\n\n${BSDdescription}\n\n`;
     } else {
-        build += `# License \n${ISCLicenseBadge}\n\n${ISCdescription}\n`;
+        build += `# License \n${ISCLicenseBadge}\n\n${ISCdescription}\n\n`;
     }
     
     build += `# Questions\n`;

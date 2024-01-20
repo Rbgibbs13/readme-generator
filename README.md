@@ -1,10 +1,11 @@
 # ReadMe Generator
 # Description
 Generates a Professional ReadMe through Command Line Iinterface prompts.
-# Table of Contents| [Title](#readme-generator) | | [Description](#description) |
-              | [Install](#install) | | [Usage](#usage) |
-              | [Contributors](#contributors) | | [License](#license) |
-              | [Questions - Contact Me](#questions) |
+# Table of Contents
+| [Title](#readme-generator) | | [Description](#description) |
+| [Install](#install) | | [Usage](#usage) |
+| [Contributors](#contributors) | | [License](#license) |
+| [Questions - Contact Me](#questions) |
 # Installation
 Clone the repository to your local machine, or download the zip and extract the files to your local machine.
 # Usage
