@@ -37,7 +37,7 @@ inquirer.prompt([
     {
         name: "contributions",
         type: "input",
-        message: "Contribution Guidelines?",
+        message: "Contributers?",
     },
     {
         name: "test",
@@ -77,27 +77,30 @@ inquirer.prompt([
     let mUsername = data.username;
     let mEmail = data.email;
 
-    let { title, description, installation, usage, contributions, test, license, username, email } = data;
+    let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
 
-    let linkTitle = "[Go to Title Section]{#title-heading}";
-    let linkDesc = "[Go to Desctiption Section]{#description-heading}";
-    let linkInstall = "[Go to Install Section]{#install-heading}";
-    let linkUsage = "[Go to Usage Section]{#usage-heading}";
-    let linkLicense = "[Go to License Section]{#license-heading}";
-    let linkContribute = "[Go to Contribution Section]{#contribution-heading}";
-    let linkQuestion = "[Go to Question Section]{#question-heading}";
+    let linkTitle = "[Go to ReadMe Generator section]{#readme-generator}";
+    let linkDesc = "[Go to Desctiption section]{#description}";
+    let linkInstall = "[Go to Install section]{#install}";
+    let linkUsage = "[Go to Usage section]{#usage}";
+    let linkLicense = "[Go to License section]{#license}";
+    let linkContribute = "[Go to Contributers Section]{#contributers}";
+    let linkQuestion = "[Go to Question Section]{#question}";
 
     let build = "";
-    build += `${mTitle}\n`;
-    build += `Description:\n${mDesc}\n\n`;
-    build += `Table of Contents\n\n`;
+    build += `#${title}\n`;
+    build += `#Description:\n${description}\n\n`;
+    build += `#Table of Contents\n\n`;
     build += `${linkTitle} ${linkDesc} ${linkInstall} ${linkUsage} ${linkLicense} ${linkContribute} ${linkQuestion}\n\n`;
-    build += `Install:\n${mInstall}\n\n`;
-    build += `Usage:\n${mUsage}\n\n`;
-    build += `Contributers:\n${mContribute}\n\n`;
-    build += `Test:\n${mTest}\n\n`;
-    build += `License:\n${mLicense}\n\n`;
-    build += `Questions - Contact Me\n${mUsername}\n${mEmail}`;
+    build += `#Install:\n${mInstall}\n\n`;
+    build += `#Usage:\n${mUsage}\n\n`;
+    build += `#Contributers:\n${mContribute}\n\n`;
+    build += `#Test:\n${mTest}\n\n`;
+    build += `#License:\n${mLicense}\n\n`;
+    build += `#Questions - Contact Me\n`;
+    build += `Github: ${username}\n`
+    build += `Email: ${email}\n`;
+    build += `Best Method: ${contact}`;
 
     fs.writeFile("README.md", build, (error) => 
         error ? console.error(error) : console.log("Saved Commit to ReadMe") 
