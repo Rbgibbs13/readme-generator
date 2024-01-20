@@ -8,18 +8,11 @@ Generates a Professional ReadMe through Command Line Iinterface prompts.
 
 Table of Contents
 
-[Title](#readme-generator)
-[Desctiption](#description)
-
-[Install](#install)
-[Usage](#usage)
-
-[Contributers](#contributers)
-[License](#license)
-
-[Questions - Contact Me](#questions-contact-me)
-
-
+|   :---:   |   :---:   |
+              |[Title](#readme-generator)|[Desctiption](#description)|
+              |[Install](#install)|[Usage](#usage)|
+              |[Contributers](#contributers)|[License](#license)|
+              |[Questions - Contact Me](#questions)|      |
 Install
 Clone or Download the repository to your local machine.
 
@@ -43,9 +36,9 @@ License:
 MIT[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-Questions - Contact Me
+Questions
 
-Github: rbgibbs13 https://github.com/Rbgibbs13
+Github: https://github.com/Rbgibbs13
 
 Email: rhett.gibbs@yahoo.com
 

@@ -85,7 +85,7 @@ inquirer.prompt([
     let linkUsage = "[Usage](#usage)";
     let linkLicense = "[License](#license)";
     let linkContribute = "[Contributers](#contributers)";
-    let linkQuestion = "[Questions - Contact Me](#questions-contact-me)";
+    let linkQuestion = "[Questions - Contact Me](#questions)";
 
         //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
     let apacheLicenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
@@ -98,7 +98,12 @@ inquirer.prompt([
     build += `${title}\n\n\n`;
     build += `Description\n\n${description}\n\n\n`;
     build += `Table of Contents\n\n`;
-    build += `${linkTitle}\n${linkDesc}\n\n${linkInstall}\n${linkUsage}\n\n${linkContribute}\n${linkLicense}\n\n${linkQuestion}\n\n`;
+    build += `|   :---:   |   :---:   |
+              |${linkTitle}|${linkDesc}|
+              |${linkInstall}|${linkUsage}|
+              |${linkContribute}|${linkLicense}|
+              |${linkQuestion}|      |`
+    //build += `${linkTitle}\n${linkDesc}\n\n${linkInstall}\n${linkUsage}\n\n${linkContribute}\n${linkLicense}\n\n${linkQuestion}\n\n`;
     build += `\nInstall\n${installation}\n\n\n`;
     build += `Usage\n\n${usage}\n\n\n`;
     build += `Contributers\n\n${contributions}\n\n\n`;
@@ -117,7 +122,7 @@ inquirer.prompt([
         build += `License:\n${license}${ISCLicenseBadge}\n\n\n`;
     }
     
-    build += `Questions - Contact Me\n\n`;
+    build += `Questions\n\n`;
     build += `Github: ${username}\n\n`
     build += `Email: ${email}\n\n`;
     build += `Best Method: ${contact}`;
