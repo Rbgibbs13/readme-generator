@@ -136,12 +136,13 @@ inquirer.prompt([
     
     let build = "";
     build += `# ${title}\n`;
-    build += `# Description\n${description}`;
+    build += `# Description\n${description}\n`;
     build += `# Table of Contents`;
     build += `| ${linkTitle} | | ${linkDesc} |
               | ${linkInstall} | | ${linkUsage} |
               | ${linkContribute} | | ${linkLicense} |
-              | ${linkQuestion} |`
+              | ${linkQuestion} |\n`
+
     build += `# Installation\n${installation}\n`;
     build += `# Usage\n${usage}\n`;
     build += `# Contributors\n${contributions}\n`;
