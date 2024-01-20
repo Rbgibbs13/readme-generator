@@ -67,16 +67,6 @@ inquirer.prompt([
         message: "Best Contact Method?",
     }
 ]).then((data) => {
-    // let mTitle = data.title;
-    // let mDesc = data.description;
-    // let mInstall = data.installation;
-    // let mUsage = data.usage;
-    // let mContribute = data.contributions;
-    // let mTest = data.test;
-    // let mLicense = data.license;
-    // let mUsername = data.username;
-    // let mEmail = data.email;
-
     let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
 
     let linkTitle = "[Title](#readme-generator)";
@@ -95,34 +85,33 @@ inquirer.prompt([
     let ISCLicenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
 
     let build = "";
-    build += `${title}\n\n\n`;
-    build += `Description\n\n${description}\n\n\n`;
-    build += `Table of Contents\n\n`;
-    build += `|   :---:   |   :---:   |
-              |${linkTitle}|${linkDesc}|
-              |${linkInstall}|${linkUsage}|
-              |${linkContribute}|${linkLicense}|
-              |${linkQuestion}|      |`
+    build += `# ${title}\n\n\n`;
+    build += `# Description\n\n${description}\n\n\n`;
+    build += `# Table of Contents\n\n`;
+    build += `| ${linkTitle} | | ${linkDesc} |
+              | ${linkInstall} | | ${linkUsage} |
+              | ${linkContribute} | | ${linkLicense} |
+              | ${linkQuestion} |\n\n\n`
     //build += `${linkTitle}\n${linkDesc}\n\n${linkInstall}\n${linkUsage}\n\n${linkContribute}\n${linkLicense}\n\n${linkQuestion}\n\n`;
-    build += `\nInstall\n${installation}\n\n\n`;
-    build += `Usage\n\n${usage}\n\n\n`;
-    build += `Contributers\n\n${contributions}\n\n\n`;
-    build += `Test\n\n${test}\n\n\n`;
+    build += `# Install\n${installation}\n\n\n`;
+    build += `# Usage\n\n${usage}\n\n\n`;
+    build += `# Contributers\n\n${contributions}\n\n\n`;
+    build += `# Test\n\n${test}\n\n\n`;
 
     if(license === "MIT") {
         console.log("MIT License");
-        build += `License:\n${license}${MITLicenseBadge}\n\n\n`;
+        build += `# License: \n${license}${MITLicenseBadge}\n\n\n`;
     } else if(license === "GNU GPL 3.0") {
-        build += `License:\n${license}${GNULicenseBadge}\n\n\n`;
+        build += `# License: \n${license}${GNULicenseBadge}\n\n\n`;
     } else if(license === "Apache 2.0") {
-        build += `License:\n${license}${apacheLicenseBadge}\n\n\n`;
+        build += `# License: \n${license}${apacheLicenseBadge}\n\n\n`;
     } else if(license === "BSD-2") {
-        build += `License:\n${license}${BSDLicenseBadge}\n\n\n`;
+        build += `# License: \n${license}${BSDLicenseBadge}\n\n\n`;
     } else {
-        build += `License:\n${license}${ISCLicenseBadge}\n\n\n`;
+        build += `# License: \n${license}${ISCLicenseBadge}\n\n\n`;
     }
     
-    build += `Questions\n\n`;
+    build += `# Questions\n\n`;
     build += `Github: ${username}\n\n`
     build += `Email: ${email}\n\n`;
     build += `Best Method: ${contact}`;
