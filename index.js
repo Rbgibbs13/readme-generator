@@ -37,7 +37,7 @@ inquirer.prompt([
     {
         name: "contributions",
         type: "input",
-        message: "Contributers?",
+        message: "Contributors?",
     },
     {
         name: "test",
@@ -70,12 +70,12 @@ inquirer.prompt([
     let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
 
     let linkTitle = "[Title](#readme-generator)";
-    let linkDesc = "[Desctiption](#description)";
+    let linkDesc = "[Description](#description)";
     let linkInstall = "[Install](#install)";
     let linkUsage = "[Usage](#usage)";
     let linkLicense = "[License](#license)";
-    let linkContribute = "[Contributers](#contributers)";
-    let linkQuestion = "[Questions - Contact Me](#questions-contact-me)";
+    let linkContribute = "[Contributors](#contributors)";
+    let linkQuestion = "[Questions - Contact Me](#questions)";
 
     // Badge links were found here => https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
     let apacheLicenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
@@ -94,23 +94,23 @@ inquirer.prompt([
               | ${linkQuestion} |\n\n\n`
     build += `# Install\n${installation}\n\n\n`;
     build += `# Usage\n${usage}\n\n\n`;
-    build += `# Contributers\n${contributions}\n\n\n`;
+    build += `# Contributors\n${contributions}\n\n\n`;
     build += `# Test\n${test}\n\n\n`;
 
     if(license === "MIT") {
         console.log("MIT License");
-        build += `# License: \n${MITLicenseBadge} ${license}\n\n\n`;
+        build += `# License \n${MITLicenseBadge} ${license}\n\n\n`;
     } else if(license === "GNU GPL 3.0") {
-        build += `# License: \n${GNULicenseBadge} ${license}\n\n\n`;
+        build += `# License \n${GNULicenseBadge} ${license}\n\n\n`;
     } else if(license === "Apache 2.0") {
-        build += `# License: \n${apacheLicenseBadge} ${license}\n\n\n`;
+        build += `# License \n${apacheLicenseBadge} ${license}\n\n\n`;
     } else if(license === "BSD-2") {
-        build += `# License: \n${BSDLicenseBadge} ${license}\n\n\n`;
+        build += `# License \n${BSDLicenseBadge} ${license}\n\n\n`;
     } else {
-        build += `# License: \n${ISCLicenseBadge} ${license}\n\n\n`;
+        build += `# License \n${ISCLicenseBadge} ${license}\n\n\n`;
     }
     
-    build += `# Questions - Contact Me\n\n`;
+    build += `# Questions\n`;
     build += `Github: ${username}\n\n`
     build += `Email: ${email}\n\n`;
     build += `Best Method: ${contact}`;

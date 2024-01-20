@@ -8,21 +8,21 @@ Generates a Professional ReadMe through Command Line Iinterface prompts.
 
 # Table of Contents
 
-| [Title](#readme-generator) | | [Desctiption](#description) |
+| [Title](#readme-generator) | | [Description](#description) |
               | [Install](#install) | | [Usage](#usage) |
-              | [Contributers](#contributers) | | [License](#license) |
-              | [Questions - Contact Me](#questions-contact-me) |
+              | [Contributors](#contributors) | | [License](#license) |
+              | [Questions - Contact Me](#questions) |
 
 
 # Install
-Clone or Download the repository to your local machine.
+Clone the repository to your local machine, or download the zip and extract the files to your local machine.
 
 
 # Usage
-Access the index.js file in the package through the Command Line Interface of your choice. Run node index.js in the CLI to generate a ReadMe file.
+Access the index.js file in the package through the Command Line Interface of your choice. Run node index.js in the CLI and follow the set of prompts to generate a ReadMe file with information about your project.
 
 
-# Contributers
+# Contributors
 Garrett Gibbs 2024
 
 
@@ -30,11 +30,14 @@ Garrett Gibbs 2024
 To test, follow same directions as usage but use random inputs!
 
 
-# License: 
+# License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) MIT
 
 
-# Questions - Contact MeGithub: https://github.com/Rbgibbs13
+# Questions
+
+
+Github: https://github.com/Rbgibbs13
 
 Email: rhett.gibbs@yahoo.com
 
