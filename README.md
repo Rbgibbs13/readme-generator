@@ -1,19 +1,26 @@
 # ReadMe Generator
+
 # Description
-Generates a Professional ReadMe through Command Line Iinterface prompts.
+Generate a Professional ReadMe through Command Line Interface prompts.
+
 # Table of Contents
 | [Title](#readme-generator) | | [Description](#description) |
-| [Install](#install) | | [Usage](#usage) |
+| [Installation](#installation) | | [Usage](#usage) |
 | [Contributors](#contributors) | | [License](#license) |
 | [Questions - Contact Me](#questions) |
+
 # Installation
 Clone the repository to your local machine, or download the zip and extract the files to your local machine.
+
 # Usage
-Access the index.js file in the package through the Command Line Interface of your choice. Run node index.js in the CLI and follow the set of prompts to generate a ReadMe file with information about your project.
+Find the packages folder and make sure there is a JSON file stored there. Access the folder containing the index.js file through the Command Line Interface of your choice. Run node index.js with node installed in the CLI and follow the set of prompts to generate a ReadMe file with information about your poject.
+
 # Contributors
 Garrett Gibbs 2024
+
 # Tests
-To test, follow same directions as usage but use random inputs!
+If you are having any issues, make sure inquirer is installed by running npm install inquirer@6.5.0 through the CLI in the packages folder. This should make sure the index.js file can access the package.
+
 # License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -39,6 +46,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 # Questions
 Github: https://github.com/Rbgibbs13 rbgibbs13
 

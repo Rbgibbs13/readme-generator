@@ -1,6 +1,13 @@
 const inquirer = require("./packages/node_modules/inquirer");
 const fs = require("fs");
 
+// Badge links were found here => https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+let apacheLicenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+let MITLicenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+let GNULicenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+let BSDLicenseBadge = "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
+let ISCLicenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+
 //Copied from License in repository :)
 let MITdescription = `
 MIT License
@@ -118,24 +125,18 @@ inquirer.prompt([
     }
 ]).then((data) => {
     let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
+    console.log(data);
 
     let linkTitle = "[Title](#readme-generator)";
     let linkDesc = "[Description](#description)";
-    let linkInstall = "[Install](#install)";
+    let linkInstall = "[Installation](#installation)";
     let linkUsage = "[Usage](#usage)";
     let linkLicense = "[License](#license)";
     let linkContribute = "[Contributors](#contributors)";
     let linkQuestion = "[Questions - Contact Me](#questions)";
-
-    // Badge links were found here => https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-    let apacheLicenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-    let MITLicenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-    let GNULicenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-    let BSDLicenseBadge = "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
-    let ISCLicenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
     
     let build = "";
-    build += `# ${title}\n`;
+    build += `# ${title}\n\n`;
     build += `# Description\n${description}\n\n`;
     build += `# Table of Contents\n`;
     build += 
@@ -170,5 +171,3 @@ inquirer.prompt([
         error ? console.error(error) : console.log("Saved Commit to ReadMe") 
     );
 });
-
-//https://img.shields.io/badge/License-MIT-yellow.svg
