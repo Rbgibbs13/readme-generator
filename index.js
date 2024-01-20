@@ -42,7 +42,7 @@ inquirer.prompt([
     {
         name: "test",
         type: "input",
-        message: "Test Instructions",
+        message: "Test Instructions?",
     },
     {
         name: "license",
