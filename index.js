@@ -47,7 +47,7 @@ inquirer.prompt([
     {
         name: "license",
         type: "list",
-        choices: ["MIT", "GNU 3.0", "Apache 2.0", "BSD-2"],
+        choices: ["MIT", "GNU GPL 3.0", "Apache 2.0", "BSD-2, ISC"],
         message: "Select License Type",
     },
     {
@@ -67,42 +67,64 @@ inquirer.prompt([
         message: "Best Contact Method?",
     }
 ]).then((data) => {
-    let mTitle = data.title;
-    let mDesc = data.description;
-    let mInstall = data.installation;
-    let mUsage = data.usage;
-    let mContribute = data.contributions;
-    let mTest = data.test;
-    let mLicense = data.license;
-    let mUsername = data.username;
-    let mEmail = data.email;
+    // let mTitle = data.title;
+    // let mDesc = data.description;
+    // let mInstall = data.installation;
+    // let mUsage = data.usage;
+    // let mContribute = data.contributions;
+    // let mTest = data.test;
+    // let mLicense = data.license;
+    // let mUsername = data.username;
+    // let mEmail = data.email;
 
     let { title, description, installation, usage, contributions, test, license, username, email, contact } = data;
 
-    let linkTitle = "[Go to ReadMe Generator section](#readme-generator)";
-    let linkDesc = "[Go to Desctiption section](#description)";
-    let linkInstall = "[Go to Install section](#install)";
-    let linkUsage = "[Go to Usage section](#usage)";
-    let linkLicense = "[Go to License section](#license)";
-    let linkContribute = "[Go to Contributers Section](#contributers)";
-    let linkQuestion = "[Go to Question Section](#question)";
+    let linkTitle = "[Title](#readme-generator)";
+    let linkDesc = "[Desctiption](#description)";
+    let linkInstall = "[Install](#install)";
+    let linkUsage = "[Usage](#usage)";
+    let linkLicense = "[License](#license)";
+    let linkContribute = "[Contributers](#contributers)";
+    let linkQuestion = "[Questions - Contact Me](#questions-contact-me)";
+
+        //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+    let apacheLicenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    let MITLicenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    let GNULicenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    let BSDLicenseBadge = "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
+    let ISCLicenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
 
     let build = "";
-    build += `#${title}\n\n`;
-    build += `#Description\n\n${description}\n\n`;
-    build += `#Table of Contents\n\n`;
-    build += `${linkTitle} ${linkDesc} ${linkInstall} ${linkUsage} ${linkLicense} ${linkContribute} ${linkQuestion}\n\n`;
-    build += `\n#Install\n${mInstall}\n\n`;
-    build += `#Usage\n${mUsage}\n\n`;
-    build += `#Contributers\n${mContribute}\n\n`;
-    build += `#Test\n${mTest}\n\n`;
-    build += `#License:\n${mLicense}\n\n`;
-    build += `#Questions - Contact Me\n`;
-    build += `Github: ${username}\n`
-    build += `Email: ${email}\n`;
+    build += `${title}\n\n\n`;
+    build += `Description\n\n${description}\n\n\n`;
+    build += `Table of Contents\n\n`;
+    build += `${linkTitle}\n${linkDesc}\n\n${linkInstall}\n${linkUsage}\n\n${linkContribute}\n${linkLicense}\n\n${linkQuestion}\n\n`;
+    build += `\nInstall\n${installation}\n\n\n`;
+    build += `Usage\n\n${usage}\n\n\n`;
+    build += `Contributers\n\n${contributions}\n\n\n`;
+    build += `Test\n\n${test}\n\n\n`;
+
+    if(license === "MIT") {
+        console.log("MIT License");
+        build += `License:\n${license}${MITLicenseBadge}\n\n\n`;
+    } else if(license === "GNU GPL 3.0") {
+        build += `License:\n${license}${GNULicenseBadge}\n\n\n`;
+    } else if(license === "Apache 2.0") {
+        build += `License:\n${license}${apacheLicenseBadge}\n\n\n`;
+    } else if(license === "BSD-2") {
+        build += `License:\n${license}${BSDLicenseBadge}\n\n\n`;
+    } else {
+        build += `License:\n${license}${ISCLicenseBadge}\n\n\n`;
+    }
+    
+    build += `Questions - Contact Me\n\n`;
+    build += `Github: ${username}\n\n`
+    build += `Email: ${email}\n\n`;
     build += `Best Method: ${contact}`;
 
     fs.writeFile("README.md", build, (error) => 
         error ? console.error(error) : console.log("Saved Commit to ReadMe") 
     );
 });
+
+//https://img.shields.io/badge/License-MIT-yellow.svg
