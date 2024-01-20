@@ -88,16 +88,16 @@ inquirer.prompt([
     let linkQuestion = "[Go to Question Section]{#question-heading}";
 
     let build = "";
-    build += `${mTitle}`;
-    build += `Description\n${mDesc}\n\n`;
-    build += `Table of Contents\n`;
-    build += `${linkTitle} ${linkDesc} ${linkInstall} ${linkUsage} ${linkLicense} ${linkContribute} ${linkQuestion}\n`;
-    build += `Install\n${mInstall}\n`;
-    build += `Usage\n${mUsage}\n`;
-    build += `Contribution\n${mContribute}\n`;
-    build += `Test\n${mTest}\n`;
-    build += `License\n${mLicense}\n`;
-    build += `Questions\n${mUsername}\n${mEmail}`;
+    build += `${mTitle}\n`;
+    build += `Description:\n${mDesc}\n\n`;
+    build += `Table of Contents\n\n`;
+    build += `${linkTitle} ${linkDesc} ${linkInstall} ${linkUsage} ${linkLicense} ${linkContribute} ${linkQuestion}\n\n`;
+    build += `Install:\n${mInstall}\n\n`;
+    build += `Usage:\n${mUsage}\n\n`;
+    build += `Contributers:\n${mContribute}\n\n`;
+    build += `Test:\n${mTest}\n\n`;
+    build += `License:\n${mLicense}\n\n`;
+    build += `Questions - Contact Me\n${mUsername}\n${mEmail}`;
 
     fs.writeFile("README.md", build, (error) => 
         error ? console.error(error) : console.log("Saved Commit to ReadMe") 
